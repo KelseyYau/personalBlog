@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,500,600,700,700i,800,900&subset=latin-ext');
+
+/* mainpage style */
+html{
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    height: 100%;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-weight: 400px;
+    font-size: 12px;
+    height: 100%;
+    text-align: center;
+    background:#454545;
+    color: #000;
+    font-family: 'Microsoft Yahei',sans-serif;
+}
+@-o-viewport{width: device-width;}
+@-ms-viewport{width: device-width;}
+@viewport{width: device-width;}
+
+/* typography */
+p{
+    text-align: left;
+    font-size: 12px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+blockquote{
+    float: left;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 15px solid #eee;
+}
+
+blockquote p{
+    font-family: "Microsoft Yahei",Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #494949;
+}
+
+.text-subtitle{
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2;
+    font-family: 'Microsoft Yahei','Montserrat',sans-serif;
+    color: #666;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.text-title {
+	float:left;
+	width:100%;
+	position:relative;
+	font-size:26px;
+	font-weight:bold;
+	letter-spacing:2px;
+	color:#191919;
+	text-transform:uppercase;
+	text-align:left;
+	padding-bottom:10px;
+	border-bottom:1px solid #eee;
+	margin-bottom:10px;
+}
+
+/* loader */
+.loader-holder{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    z-index:150;
+}
+
+.loader-inner{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 30;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+}
+
+.loader{
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-left: 10px solid #404040;
+    animation: loadPage 1s infinite linear;
+    -webkit-animation: loadPage 1s infinite linear;
+    -moz-animation: loadPage 1s infinite linear;
+    -ms-animation: loadPage 1s infinite linear;
+    --animation: loadPage 1s infinite linear;
+}
+
+.loader,.loader:after{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes loadPage{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes loadPage{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes loadPage{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+@-ms-keyframes loadPage{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
