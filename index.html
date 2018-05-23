@@ -7,20 +7,21 @@
     <meta name="ke">
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link type="text/css"  href="./css/plugins.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/color.css">
 
 </head>
 <body>
     <!-- ============loader============= -->
-    <div class="loader-holder" style="display:block;">
+    <div class="loader-holder">
         <div class="loader-inner loader-vis">
             <div class="loader"></div>
         </div>
     </div>
 
     <!-- ========== main page ========= -->
-    <div id="main" style="opacity:1;">
+    <div id="main" style="opacity:0;">
         <!-- ========== header ========== -->
         <header class="main-header">
             <a href="./index.html" class="logo-holder">
@@ -37,9 +38,36 @@
         </header>
 
         <!-- hide menu -->
+        <div class="main-page">
+            <div class="menu-inner">
+                <a href="./index.html" class="menu-logo"><img src="./images/logo2.png" alt=""></a>
+                <div class="hid-menu-page">
+                    <div id="hid-menu">
+                        <ul class="menu">
+                            <li>
+                                <a href="./index.html">主页</a>
+                            </li>
+                            <li><a href="./mylife.html">我的生活</a></li>
+                            <li><a href="./myblog.html">技术分享</a></li>
+                            <li><a href="./guitar.html">吉他学习</a></li>
+                            <li><a href="./contact.html">联系我</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 弹性动画 -->
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
         
     </div>
+
     <script src="./js/jquery.min.js"></script>
+    <!-- <script src="./js/plugins.js"></script> -->
     <script src="./js/index.js"></script>
 </body>
 </html>
