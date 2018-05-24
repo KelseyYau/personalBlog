@@ -2,7 +2,7 @@
 
 
 /* fonts */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,500,600,700,700i,800,900&subset=latin-ext');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,500,600,700,700i,800,900&subset=latin-ext'); */
 
 /* mainpage style */
 html{
@@ -184,3 +184,214 @@ blockquote p{
         -o-transform: rotate(360deg);
     }
 }
+
+/* main page */
+#main{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* header 左侧边栏头部*/
+.main-header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    z-index: 40;
+    background: #383838;
+}
+.logo-holder{
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+
+}
+.logo-holder img{
+    width: 40px;
+    height: auto;
+    float: left;
+}
+
+.nav-button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 20px;
+    margin-top: -15px;
+    z-index: 10;
+    cursor: pointer;
+}
+.nav-button::after{
+    content: "菜单";
+    color: #fff;
+    position: absolute;
+    top: -40px;
+    left: 2px;
+    opacity: 0;
+    visibility: hidden;
+    font-style: italic;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+}
+
+.nav-button:hover::after{
+    visibility: visible;
+    opacity: 1;
+    top: -20px;
+}
+.menu-global{
+    border-top: 3px solid #fff;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+}
+.menu-top{
+    top: 0;
+}
+.menu-middle{
+    top:10px;
+}
+.menu-bottom{
+    top: 20px;
+}
+
+.show-share{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 25px;
+    bottom: 40px;
+    cursor: pointer;
+}
+.show-share img{
+    width: 20px;
+    height: auto;
+}
+.show-share::before{
+    content: "分享";
+    color: #fff;
+    position: absolute;
+    top: -40px;
+    left: -1px;
+    font-size:10px;
+    font-style: italic;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+}
+.show-share:hover::before{
+    opacity: 1;
+    visibility: visible;
+    top: -20px;
+}
+
+
+/* footer 右侧边栏 */
+.main-footer{
+    z-index: 120;
+    position: fixed;
+    width: 50px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #404040;
+    border-left:1px solid rgba(255, 255, 255,0.21);
+}
+.mail-link{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255,0.51);
+    transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    -ms-transition: all 500ms linear;
+}
+.mail-link:hover{
+    color: #ffc815;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.social-list{
+    width: 100%;
+    position: absolute;
+    top:70px;
+    left: 0;
+}
+.social-list::before,.social-list::after{
+    content: '';
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    height: 1px;
+    background: rgba(255, 255, 255,0.21)
+}
+.social-list::before{
+    top: -10px;
+}
+.social-list::after{
+    bottom: -20px;
+}
+.social-list ul li{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.social-list ul li a{
+    display: inline-block;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    background: #ffc815;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    -o-transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    -moz-transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    -o-transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.social-list ul li a:hover{
+    background: rgba(255, 255, 255,0.51);
+    color: #ffc815;
+    box-shadow:  0 0 30px -2px #999;
+}
+.copyright{
+    position: absolute;
+    left: 37px;
+    bottom: 185px;
+    width: 250px;
+    text-align: left;
+    color: #fff;
+    letter-spacing: 1px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
+
