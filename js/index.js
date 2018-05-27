@@ -1,10 +1,18 @@
 function init(){
     // on load
-    $(".loader-holder").fadeOut(1000, function() {
+    $(".loader-holder").fadeOut(500, function() {
         $("#main").animate({
             opacity: "1"
-        }, 1000);
+        }, 500);
     });
+
+    // load image
+    var bgImg = $(".bg");
+    bgImg.each(function(a){
+        if ($(this).attr("data-bg")){
+            $(this).css("background-image",`url(${$(this).data("bg")})`);
+        }
+    })
 }
 
 init();
