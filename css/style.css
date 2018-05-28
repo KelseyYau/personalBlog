@@ -199,7 +199,6 @@ blockquote p{
     width: 100%;
     position: relative;
 }
-
 .no-bg{
     background: none;
 }
@@ -271,6 +270,54 @@ blockquote p{
 	font-weight:200;
 	background:rgba(255,255,255,0.21);
 	border-radius:4px;
+}
+.container{
+    max-width: 1024px;
+    width: 90%;
+    margin:0 auto;
+    position: relative;
+    z-index:5;
+}
+.carousel-wrap-item p{
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.carousel-wrap-item h2{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    float: left;
+    width: 100%
+}
+.carousel-wrap-item h3{
+    color: #191919;
+    font-size: 24px;
+    float: left;
+    width: 100%;
+}
+.left-title{
+    padding-top: 100px;
+    text-align: left;
+}
+
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    width: atuo;
+    padding: 15px 18px;
+    background: #ffc815;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing:2px;
+}
+.hide-icon i{
+
+    display: inline-block;
+    background: #191919;
 }
 /* header 左侧边栏头部*/
 .main-header{
@@ -459,7 +506,7 @@ blockquote p{
 .copyright{
     position: absolute;
     left: 37px;
-    bottom: 185px;
+    bottom: 200px;
     width: 250px;
     text-align: left;
     color: #fff;
@@ -470,5 +517,9 @@ blockquote p{
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
     transform-origin: left top;
+}
+
+.copyright a{
+    color: #fff;
 }
 
