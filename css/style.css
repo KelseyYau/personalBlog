@@ -306,18 +306,47 @@ blockquote p{
     margin-top: 10px;
     display: inline-block;
     color: #fff;
-    font-size: 14px;
-    width: atuo;
+    width: auto;
+    max-width: 100%;
     padding: 15px 18px;
     background: #ffc815;
     border-radius: 5px;
     text-align: center;
     letter-spacing:2px;
+    position: relative;
+    overflow: hidden;
 }
 .hide-icon i{
-
+    font-size: 14px;
     display: inline-block;
-    background: #191919;
+    width: auto;
+    line-height: 25px;
+    padding: 11px 20px 11px;
+    border-radius: 5px 0px 0px 5px;
+    background: #414146;
+    position: absolute;
+    left: -60px;
+    top: 0px;
+    transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+}
+.hide-icon:hover i{
+    left: -1px;
+}
+.hide-icon:hover span{
+    padding: 0px 10px 0px 53px;
+}
+.hide-icon span{
+    padding: 0 33px;
+    font-size: 12px;
+    transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -ms-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
 }
 /* header 左侧边栏头部*/
 .main-header{
