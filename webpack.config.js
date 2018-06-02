@@ -1,4 +1,6 @@
 const path = require('path');
+const htmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     entry:'./src/js/index.js',
@@ -11,7 +13,8 @@ module.exports = {
             // 处理图片
             {
                 test:/\.(png|svg|jpg|git)$/,
-                use:['file-loader']
+                use:['url-loader'],
+                // publicPath: "./"
             },
             //处理字体
             {
@@ -42,5 +45,24 @@ module.exports = {
                 ]
             }
         ]
+    },
+    //插件
+    plugins:[
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"index",
+            filename:"index.html",
+            template:'./index.html'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    //DevServer
+    devServer:{
+        //基本访问目录
+        contentBase:path.resolve(__dirname,'dist'),
+        host:"localhost",
+        port:9001,
+        open:true,
+        hot:true
     }
 };
