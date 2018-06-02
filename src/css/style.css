@@ -189,7 +189,7 @@ blockquote p{
 #main{
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
@@ -234,120 +234,7 @@ blockquote p{
     opacity: 0.2;
 }
 
-/* 轮播图 */
-.carousel-page{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    z-index: 100;
-    padding-left: 70px;
-    padding-right: 50px;
-}
-.carousel-slider-holder{
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-}
-.carousel-wrap-item{
-    position: relative;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    float: left;
-    z-index: 6;
-}
-.num-holder3 {
-	position:absolute;
-	top:50px;
-	right:30px;
-	width:60px;
-	height:30px;
-	line-height:30px;
-	color:#fff;
-	z-index:15;
-	font-weight:200;
-	background:rgba(255,255,255,0.21);
-	border-radius:4px;
-}
-.container{
-    max-width: 1024px;
-    width: 90%;
-    margin:0 auto;
-    position: relative;
-    z-index:5;
-}
-.carousel-wrap-item p{
-    color: #fff;
-    font-style: italic;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.carousel-wrap-item h2{
-    color: #fff;
-    font-size: 48px;
-    font-weight: 500;
-    float: left;
-    width: 100%
-}
-.carousel-wrap-item h3{
-    color: #191919;
-    font-size: 24px;
-    float: left;
-    width: 100%;
-}
-.left-title{
-    padding-top: 100px;
-    text-align: left;
-}
 
-.btn{
-    margin-top: 10px;
-    display: inline-block;
-    color: #fff;
-    width: auto;
-    max-width: 100%;
-    padding: 15px 18px;
-    background: #ffc815;
-    border-radius: 5px;
-    text-align: center;
-    letter-spacing:2px;
-    position: relative;
-    overflow: hidden;
-}
-.hide-icon i{
-    font-size: 14px;
-    display: inline-block;
-    width: auto;
-    line-height: 25px;
-    padding: 11px 20px 11px;
-    border-radius: 5px 0px 0px 5px;
-    background: #414146;
-    position: absolute;
-    left: -60px;
-    top: 0px;
-    transition: all 200ms linear;
-    -webkit-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -o-transition: all 200ms linear;
-}
-.hide-icon:hover i{
-    left: -1px;
-}
-.hide-icon:hover span{
-    padding: 0px 10px 0px 53px;
-}
-.hide-icon span{
-    padding: 0 33px;
-    font-size: 12px;
-    transition: all 500ms linear;
-    -webkit-transition: all 500ms linear;
-    -ms-transition: all 500ms linear;
-    -moz-transition: all 500ms linear;
-    -o-transition: all 500ms linear;
-}
 /* header 左侧边栏头部*/
 .main-header{
     position: fixed;
@@ -355,7 +242,7 @@ blockquote p{
     top: 0;
     width: 70px;
     height: 100%;
-    z-index: 40;
+    z-index: 120;
     background: #383838;
 }
 .logo-holder{
@@ -363,7 +250,6 @@ blockquote p{
     position: absolute;
     top: 60px;
     left: 15px;
-
 }
 .logo-holder img{
     width: 40px;
@@ -453,6 +339,146 @@ blockquote p{
     top: -20px;
 }
 
+/* 固定菜单 */
+.menu-page{
+    position: fixed;
+}
+/* 轮播图 */
+.carousel-page{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    z-index: 10;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+.carousel-slider-holder{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.carousel-wrap-item{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    float: left;
+    z-index: 6;
+}
+.num-holder3 {
+	position:absolute;
+	top:50px;
+	right:30px;
+	width:60px;
+	height:30px;
+	line-height:30px;
+	color:#fff;
+	z-index:15;
+	font-weight:200;
+	background:rgba(255,255,255,0.21);
+	border-radius:4px;
+}
+.container{
+    max-width: 1024px;
+    width: 80%;
+    margin:0 auto;
+    position: relative;
+    z-index:5;
+}
+.carousel-wrap-item p{
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.carousel-wrap-item h2{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    float: left;
+    width: 100%
+}
+.carousel-wrap-item h3{
+    color: #191919;
+    font-size: 24px;
+    float: left;
+    width: 100%;
+}
+
+.left-title{
+    text-align: left;
+} 
+
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    color: #fff;
+    width: auto;
+    max-width: 100%;
+    padding: 15px 18px;
+    background: #ffc815;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing:2px;
+    position: relative;
+    overflow: hidden;
+}
+.hide-icon i{
+    font-size: 14px;
+    display: inline-block;
+    width: auto;
+    line-height: 25px;
+    padding: 11px 20px 11px;
+    border-radius: 5px 0px 0px 5px;
+    background: #414146;
+    position: absolute;
+    left: -60px;
+    top: 0px;
+    transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+}
+.hide-icon:hover i{
+    left: -1px;
+}
+.hide-icon:hover span{
+    padding: 0px 10px 0px 53px;
+}
+.hide-icon span{
+    padding: 0 33px;
+    font-size: 12px;
+    transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -ms-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+}
+
+.carousel-page .customNavigation a{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background:#ffc815;
+    border-radius: 5px;
+    z-index: 20;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.prev-slide{
+    left: 5%;
+}
+.next-slide{
+    right: 5%;
+}
 
 /* footer 右侧边栏 */
 .main-footer{
