@@ -1,11 +1,11 @@
-require("../css/reset.css");
-// require("../css/plugins.css");
-require("../css/color.css");
-require("../css/font-awesome.min.css");
-require("../css/style.css");
+import "../css/reset.css";
+import "../css/color.css";
+import "../css/font-awesome.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/style.css";
 
-require("jquery");
-require("bootstrap");
+import 'jquery';
+import 'bootstrap';
 
 function init(){
     // on load
@@ -24,7 +24,10 @@ function init(){
     });
 
     //carousel
-
+    $("#myCarousel").carousel({  
+        interval: 500000,  
+        wrap: true  
+    }); 
 
 }
 

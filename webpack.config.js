@@ -1,6 +1,7 @@
 const path = require('path');
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry:'./src/js/index.js',
@@ -48,6 +49,10 @@ module.exports = {
     },
     //插件
     plugins:[
+         new copyWebpackPlugin([{
+            from:__dirname + '/src/images',
+            to:__dirname + '/dist/src/images'
+        }]),
         new htmlWebpackPlugin({
             chunks:['index'],
             title:"index",
@@ -58,7 +63,6 @@ module.exports = {
     ],
     //DevServer
     devServer:{
-        //基本访问目录
         contentBase:path.resolve(__dirname,'dist'),
         host:"localhost",
         port:9001,
