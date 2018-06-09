@@ -234,7 +234,6 @@ blockquote p{
     opacity: 0.2;
 }
 
-
 /* header 左侧边栏头部*/
 .main-header{
     position: fixed;
@@ -299,21 +298,54 @@ blockquote p{
     top: 0;
 }
 .menu-middle{
-    top:10px;
+    top:20px;
 }
 .menu-bottom{
-    top: 20px;
+    top: 10px;
 }
-
+.menu-top-click{
+    backface-visibility: hidden;
+    top: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: 0.55s 0.5s;
+    -webkit-transition: 0.55s 0.5s;
+    -moz-transition: 0.55s 0.5s;
+    -ms-transition: 0.55s 0.5s;
+}
+.menu-middle-click{
+    opacity: 0;
+    transition: 0.55s 0.2s;
+    -webkit-transition: 0.55s 0.2s;
+    -moz-transition: 0.55s 0.2s;
+    -ms-transition: 0.55s 0.2s;
+}
+.menu-bottom-click{
+    backface-visibility: hidden;
+    top: 10px;
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+    -moz-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    transition: 0.55s 0.5s;
+    -webkit-transition: 0.55s 0.5s;
+    -moz-transition: 0.55s 0.5s;
+    -ms-transition: 0.55s 0.5s;
+}
 .show-share{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 40px;
     left: 25px;
     bottom: 40px;
     cursor: pointer;
 }
+
 .show-share img{
+    padding-top: 8px;
+    float: left;
     width: 20px;
     height: auto;
 }
@@ -338,12 +370,123 @@ blockquote p{
     visibility: visible;
     top: -20px;
 }
+.show-list{
+    /* position: absolute; */
+    width: 200px;
+    height: 40px;
+    margin-left: 50px;
+    font-size: 0;
+    opacity: 0;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+}
+
+.show-list li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 10;
+    text-align: center;
+    font-size: 16px;
+    background: #ffc815;
+}
+.show-list li .fa{
+    color: #000;
+}
+.show-list li:hover{
+    background: rgba(255,200,21,0.5);
+}
 
 /* 固定菜单 */
 .menu-page{
     position: fixed;
     z-index: 50;
+    width: 280px;
+    height: 100%;
+    z-index: 50;
+    font-size: 1.2em;
+    transform: translate3d(-280px,0,0);
+    -webkit-transform: translate3d(-280px,0,0);
+    -moz-transform: translate3d(-280px,0,0);
+    -ms-transform: translate3d(-280px,0,0);
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
 }
+.menu-inner::before{
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    height: 0px;
+    width: 0%;
+    background: #ffc815;
+    left: 75px;
+}
+.menu-inner{
+    height: 100%;
+    position: relative;
+    z-index: 51;
+    padding: 3em 0em 0 1em;
+    right: 0;
+}
+.menu{
+    width: 100%;
+}
+.menu li a{
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    padding: 1em 1em 1em 4em;
+    letter-spacing: 0.1em;
+    border-top: 1px solid rgba(255, 255, 255,0);
+}
+.menu li a:hover{
+    color: #ffc815;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+.morph-shape{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    fill: #373a47;
+    opacity: 0.7;
+}
+
+.show-menu .menu-page{
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+}
+.show-menu .menu-page,
+.show-menu .menu-inner,
+.show-menu .menu,
+.show-menu .morph-shape{
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+.show-menu .menu li a{
+    border-top: 1px solid rgba(255, 255, 255,0.11);
+    transition: border-top 0.3s;
+    transition-delay: 0.3s;
+}
+.show-menu .menu-inner:before{
+    height: 1px;
+    width: 70%;
+    transition: height 0.3s,width,0.3s;
+    transition-delay: 0.3s;
+}
+
 /* 轮播图 */
 .item{
     position: relative;
@@ -355,7 +498,7 @@ blockquote p{
     left: -100%;
 }
 .carousel-page{
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     overflow: hidden;
@@ -502,6 +645,115 @@ blockquote p{
     right: 5%;
 }
 
+/* fixed slide 左侧固定展示模块 */
+.scroll-nav-holder{
+    height: 100%;
+}
+.fixed-column{
+    position: fixed;
+    padding-left: 70px;
+    height: 100%;
+    width:30%;
+    top: 0;
+    left: 0; 
+    z-index: 4;
+    overflow: hidden;
+}
+
+/* 主要内容展示区 */
+/* nav 导航菜单 */
+.scroll-nav-holder{
+    width: 70%;
+    padding-right: 50px;
+    float: right;
+    background: #fff;
+}
+
+.scroll-nav{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(255,200,21,0.85);
+}
+.scroll-nav ul{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    font-size: 0;
+}
+.scroll-nav ul li{
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid rgba(255, 255, 255,0.11);
+    width: calc(100% / 5);
+    font-size: 14px;
+    background: #404040;
+}
+.scroll-nav ul li:last-child{
+    border-right: none;
+}
+.scroll-nav ul li a{
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+.scroll-nav ul li a:hover{
+    color: #999;
+    text-decoration: none;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+}
+/* section */
+section{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    z-index: 1;
+}
+section .container{
+    max-width:1024px;
+    width: 95%;
+}
+section .container .sect-title{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+section h2{
+    float: left;
+    font-weight: bold;
+    width: inherit;
+    text-align: left;
+    position: relative;
+}
+
+section h2::before{
+    position: absolute;
+    left:-25px;
+    top:-25px;
+    content: "";
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    opacity:0.8;
+}
+section .sect-title p{
+    float:left;
+    padding-top: 10px;
+}
+section .sect-title .separator{
+    display:inline-block;
+    width:80px;
+    height: 3px;
+    background: #ffc815;
+}
 /* footer 右侧边栏 */
 .main-footer{
     z-index: 120;

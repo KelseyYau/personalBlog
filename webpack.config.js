@@ -44,6 +44,11 @@ module.exports = {
                     
                   }
                 ]
+            },
+            //import snapsvg
+            {
+                test:require.resolve('snapsvg/dist/snap.svg.js'),
+                use: 'imports-loader?this=>window,fix=>module.exports=0',
             }
         ]
     },
@@ -68,5 +73,10 @@ module.exports = {
         port:9001,
         open:true,
         hot:true
+    },
+    resolve: {
+        alias: {
+          snapsvg: 'snapsvg/dist/snap.svg.js',
+        },
     }
 };
