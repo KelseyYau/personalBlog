@@ -111,30 +111,6 @@ function init(){
         var navTxt = $('.fbgs').data('bgtex');
         
         $('.bg-scroll').css("background-image",`url(${sideImage})`);
-        $('.bg-title span').html(navTxt);
-        var $sec2 = $('#sec2');
-        var orinOffTop = $sec2.offset().top;
-
-        var $arrayTabA = $(".nav-list").find("a");
-
-        for(var i = 0;i<=$arrayTabA.length;i++){
-            $($arrayTabA[i]).click(function(){
-                var secAttr = $(this).attr('data-bgtex');
-
-                var targetOffTop = $('#' + secAttr).offset().top;
-                if(secAttr == 'sec2'){
-                    $('html,body').animate({
-                        scrollTop:$(".nav-list").offset().top
-                    },1000);
-                }else{
-                    $('html,body').animate({
-                        scrollTop:targetOffTop
-                    },1000);
-                }
-
-            });
-        }
-
     })();
 }
 

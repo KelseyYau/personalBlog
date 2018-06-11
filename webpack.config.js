@@ -15,12 +15,15 @@ module.exports = {
             {
                 test:/\.(png|svg|jpg|git)$/,
                 use:['url-loader'],
-                // publicPath: "./"
             },
             //处理字体
             {
                 test:/.(woff|woff2|eot|ttf|oft)$/,
-                use:['file-loader']
+                loader:'file-loader',
+                options:{
+                    publicPath: "./src/fonts",
+                    outputPath:"./src/fonts"
+                }
             },
             // jquery
             {          
@@ -55,8 +58,8 @@ module.exports = {
     //插件
     plugins:[
          new copyWebpackPlugin([{
-            from:__dirname + '/src/images',
-            to:__dirname + '/dist/src/images'
+            from:__dirname + '/src',
+            to:__dirname + '/dist/src'
         }]),
         new htmlWebpackPlugin({
             chunks:['index'],

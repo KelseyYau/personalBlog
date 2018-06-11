@@ -202,12 +202,7 @@ blockquote p{
 .no-bg{
     background: none;
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-    visibility:hidden;
-}
+
 .full-height{
     height: 100%;
 }
@@ -668,17 +663,13 @@ blockquote p{
 /* 主要内容展示区 */
 /* nav 导航菜单 */
 .scroll-nav-holder{
-    /* position: fixed; */
     width: 70%;
     padding-right: 50px;
-    float:right;
+    float: right;
     background: #fff;
-    height: auto;
 }
 
 .scroll-nav{
-    position: relative;
-    float: left;
     width: 100%;
     height: 50px;
     border-bottom: 1px solid rgba(255,200,21,0.85);
@@ -704,10 +695,7 @@ blockquote p{
     border-right: none;
 }
 .scroll-nav ul li a{
-    display: inline-block;
     color: #fff;
-    width: 100%;
-    height: 100%;
     font-weight: 500;
     text-decoration: none;
 }
@@ -720,18 +708,12 @@ blockquote p{
     -ms-transition: all 1.5s;
     -o-transition: all 1.5s;
 }
-.content{
-    float: left;
-    width:100%;
-}
 /* section */
 section{
     position: relative;
     width: 90%;
     margin: 20px auto;
     z-index: 1;
-    border-bottom: 2px dashed #eee;
-    padding-bottom:50px;
 }
 section .container{
     max-width:1024px;
@@ -749,7 +731,6 @@ section h2{
     width: inherit;
     text-align: left;
     position: relative;
-    color:#666;
 }
 
 section h2::before{
@@ -764,92 +745,14 @@ section h2::before{
     opacity:0.8;
 }
 section .sect-title p{
-    font-style: italic;
     float:left;
     padding-top: 10px;
-    width: inherit;
 }
 section .sect-title .separator{
-    margin-top: 10px;
-    float: left;
     display:inline-block;
     width:80px;
-    height: 5px;
+    height: 3px;
     background: #ffc815;
-}
-section .container a{
-    float: left;
-}
-/* section sec2 */
-.sec2-box{
-    width:100%;
-    padding-top:20px;
-    padding-bottom:40px;
-}
-.sec2-box .sec2-bg .resimg{
-    width: 100%;
-    height: auto;
-}
-
-/* section sec4 */
-.works{
-    margin-top: 5px;
-    padding:5px 5px;
-    border-bottom: 1px solid #eee;
-}
-.works>a{
-    text-decoration: none;
-    text-align: left;
-}
-.works a h4{
-    color: #191919;
-}
-.works a h4:hover{
-    color:#ffc815;
-}
-.works p{
-    width: 100%;
-    height: 100px;
-    font-size:13px;
-    overflow: hidden;
-}
-.works .post-meta{
-    text-align: left;
-}
-.works .post-meta>i{
-    padding-right: 20px;
-}
-/* section sec5 */
-.youku-video{
-    float: left;
-    padding: 50px 0px;
-    width:100%;
-    position: relative; 
-    padding-bottom: 56.25%;
-}
-.youku-title h4{
-    float:left;
-    padding: 5px;
-    font-size: 14px;
-    width:100%;
-    text-align:left;
-    border-bottom: 1px solid rgba(255,200,21,0.85);
-}
-.youku-video embed{
-    position: absolute; 
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-}
-.guitar-work{
-    padding-top: 20px;
-    font-size: 14px;
-    text-align:left;
-    border-bottom: 1px solid rgba(255,200,21,0.85);
-}
-.guitar-work i{
-    padding-left:10px;
 }
 /* footer 右侧边栏 */
 .main-footer{
