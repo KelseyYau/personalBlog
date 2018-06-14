@@ -67,6 +67,36 @@ module.exports = {
             filename:"index.html",
             template:'./index.html'
         }),
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"myblog",
+            filename:"myblog.html",
+            template:'./myblog.html'
+        }),
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"guitar",
+            filename:"guitar.html",
+            template:'./guitar.html'
+        }),
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"mylife",
+            filename:"mylife.html",
+            template:'./mylife.html'
+        }),
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"contact",
+            filename:"contact.html",
+            template:'./contact.html'
+        }),
+        new htmlWebpackPlugin({
+            chunks:['index'],
+            title:"blog-single",
+            filename:"blog-single.html",
+            template:'./blog-single.html'
+        }),
         new webpack.HotModuleReplacementPlugin()
     ],
     //DevServer

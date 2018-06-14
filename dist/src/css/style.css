@@ -202,7 +202,12 @@ blockquote p{
 .no-bg{
     background: none;
 }
-
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+    visibility:hidden;
+}
 .full-height{
     height: 100%;
 }
@@ -662,17 +667,36 @@ blockquote p{
 
 /* 主要内容展示区 */
 /* nav 导航菜单 */
-.scroll-nav-holder{
+.scroll-wrap{
+    position: relative;
     width: 70%;
     padding-right: 50px;
-    float: right;
+    float:right;
     background: #fff;
+    height: auto;
+    z-index: 6;
 }
 
+.scroll-nav-holder{
+    position: relative;
+    top: 0;
+    width:100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255,200,21,0.85);
+}
+
+.scroll-nav-fixed{
+    position: fixed;
+    z-index: 12;
+    width: 70%;
+    padding-right: 50px;
+}
 .scroll-nav{
+    position: relative;
+    float: left;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid rgba(255,200,21,0.85);
+
 }
 .scroll-nav ul{
     position: absolute;
@@ -691,13 +715,58 @@ blockquote p{
     font-size: 14px;
     background: #404040;
 }
-.scroll-nav ul li:last-child{
+.active-list::before,.active-list::after{
+    opacity: 1!important;
+    height: 100%!important;
+    background: #ffc815!important;
+    transition: all 0.7s ease-in;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -ms-transition: all 0.7s ease-in;
+    z-index: 1;
+}
+
+.scroll-nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 0%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+}
+.scroll-nav ul li a::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 0%;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+}
+
+.scroll-nav ul li a:last-child{
     border-right: none;
 }
 .scroll-nav ul li a{
+    display: inline-block;
     color: #fff;
+    width: 100%;
+    height: 100%;
     font-weight: 500;
     text-decoration: none;
+}
+.scroll-nav ul li a>span{
+    position: relative;
+    z-index: 5;
 }
 .scroll-nav ul li a:hover{
     color: #999;
@@ -708,12 +777,18 @@ blockquote p{
     -ms-transition: all 1.5s;
     -o-transition: all 1.5s;
 }
+.content{
+    float: left;
+    width:100%;
+}
 /* section */
 section{
     position: relative;
     width: 90%;
     margin: 20px auto;
     z-index: 1;
+    border-bottom: 2px dashed #eee;
+    padding-bottom:50px;
 }
 section .container{
     max-width:1024px;
@@ -731,6 +806,7 @@ section h2{
     width: inherit;
     text-align: left;
     position: relative;
+    color:#666;
 }
 
 section h2::before{
@@ -745,14 +821,177 @@ section h2::before{
     opacity:0.8;
 }
 section .sect-title p{
+    font-style: italic;
     float:left;
     padding-top: 10px;
+    width: inherit;
 }
 section .sect-title .separator{
+    margin-top: 10px;
+    float: left;
     display:inline-block;
     width:80px;
-    height: 3px;
+    height: 5px;
     background: #ffc815;
+}
+section .container a{
+    float: left;
+}
+/* section sec2 */
+#sec2{
+    padding-top: 70px;
+}
+.sec2-box{
+    width:100%;
+    padding-top:50px;
+    padding-bottom:40px;
+}
+.sec2-box .sec2-bg .resimg{
+    width: 100%;
+    height: auto;
+}
+
+/* section sec4 */
+.works{
+    margin-top: 5px;
+    padding:5px 5px;
+    border-bottom: 1px solid #eee;
+}
+.works>a{
+    text-decoration: none;
+    text-align: left;
+}
+.works a h4{
+    color: #191919;
+}
+.works a h4:hover{
+    color:#ffc815;
+}
+.works p{
+    width: 100%;
+    height: 100px;
+    font-size:13px;
+    overflow: hidden;
+}
+.works .post-meta{
+    text-align: left;
+}
+.works .post-meta>i{
+    padding-right: 20px;
+}
+/* section sec5 */
+.youku-video{
+    float: left;
+    padding: 50px 0px;
+    width:100%;
+    position: relative; 
+    padding-bottom: 56.25%;
+}
+.youku-title h4{
+    float:left;
+    padding: 5px;
+    font-size: 14px;
+    width:100%;
+    text-align:left;
+    border-bottom: 1px solid rgba(255,200,21,0.85);
+}
+.youku-video embed{
+    position: absolute; 
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.guitar-work{
+    padding-top: 20px;
+    font-size: 14px;
+    text-align:left;
+    border-bottom: 1px solid rgba(255,200,21,0.85);
+}
+.guitar-work i{
+    padding-left:10px;
+}
+
+ /* section sec6 */ 
+#map{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 400px;
+}
+
+/* back to top  */
+.small-sec{
+    position: relative;
+}
+.to-top-btn{
+    width: 100%;
+    height: 100px;
+}
+.to-top-btn a{
+    display: inline-block;
+    width: 20%;
+    text-decoration: none;
+    color: #191919;
+}
+.to-top-btn a i{
+    display: inline-block;
+    color: #ffc815;
+    font-size: 16px;
+    width:100%;
+    padding: 20px 0;
+}
+
+/* input box */
+.search{
+    width: 60%;
+    margin: 20px 0;
+    float: left;
+    border: 1px solid rgb(193, 193, 193);
+}
+.search .search-box{
+    float: left;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    color: #747272;
+}
+.search a{
+    display: inline-block;
+    float: left;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    color: #191919;
+}
+
+/* page list */
+.page-list{
+    margin: 0 atuo;
+    width: 50%;
+    height: 40px;
+}
+.page-list .page{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #eee;
+    color: #747272;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.firstpage,.prevpage,.nextpage,.lastpage{
+    width: calc(60% / 4);
+}
+.page-list .on{
+    background: #ffc815;
+    color: #fff;
+}
+.netease{
+    margin-top: 20px;
+    float: left;
 }
 /* footer 右侧边栏 */
 .main-footer{
@@ -814,6 +1053,7 @@ section .sect-title .separator{
     margin-bottom: 10px;
 }
 .social-list ul li a{
+    color: #191919;
     display: inline-block;
     line-height: 30px;
     width: 30px;
@@ -849,6 +1089,8 @@ section .sect-title .separator{
 }
 
 .copyright a{
+    text-decoration: none;
     color: #fff;
 }
+
 

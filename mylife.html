@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ke">
+    <title>KelseyYau</title>
+
+</head>
+<body>
+    <!-- ============loader============= -->
+    <div class="loader-holder">
+        <div class="loader-inner loader-vis">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- ========== main page ========= -->
+    <div id="main" style="opacity:0;">
+        <!-- ========== header ========== -->
+        <header class="main-header">
+            <a href="./index.html" class="logo-holder">
+                <img src="./src/images/logo.png" alt="logo">
+            </a>
+            <div class="nav-button" id="open-button">
+                <span class="menu-global menu-top"></span>
+                <span class="menu-global menu-middle"></span>
+                <span class="menu-global menu-bottom"></span>
+            </div>
+            <div class="show-share isShare">
+                <img src="./src/images/share.png" alt="">
+                <ul class="show-list">
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                    <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+                    <li><a href="#"><i class="fa fa-weixin"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- hide menu -->
+        <div class="menu-page">
+            <div class="menu-inner">
+                <a href="./index.html" class="menu-logo"><img src="./src/images/logo2.png" alt=""></a>
+                <div class="hid-menu-page">
+                    <div id="hid-menu">
+                        <ul class="menu">
+                            <li>
+                                <a href="./index.html">主页</a>
+                            </li>
+                            <li><a href="./mylife.html">我的生活</a></li>
+                            <li><a href="./myblog.html">技术分享</a></li>
+                            <li><a href="./guitar.html">吉他学习</a></li>
+                            <li><a href="./contact.html">联系我</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">   
+                    <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>   
+                </svg>   
+            </div>
+        </div>
+        
+        <!-- fixed side mudule -->
+        <div class="fixed-column">
+            <div class="bg bg-scroll" data-bg="./src/images/"></div>
+            <div class="bg-title"><span></span></div>
+            <div class="progress-bar"></div>
+        </div>
+
+        <!-- scroll page navigation -->
+        <div class="scroll-wrap">
+            <!-- content -->
+            <div class="content clearfix">
+
+                <div class="page-list">
+                    <a href="" class="page firstpage">首页</a>
+                    <a href="" class="page prevpage">上一页</a>
+                    <a href="" class="page on">1</a>
+                    <a href="" class="page">2</a>
+                    <a href="" class="page">3</a>
+                    <a href="" class="page nextpage">下一页</a>
+                    <a href="" class="page lastpage">尾页</a>
+                </div>
+                <div class="small-sec">
+                    <div class="to-top-btn">
+                        <a href="#" class="to-top"><i class="fa fa-angle-double-up"></i><span>回到顶部</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+         <footer class="main-footer">
+            <a href="./contact.html" class="mail-link"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <div class="social-list">
+                <ul>
+                    <li><a href="https://github.com/KelseyYau" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                    <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+                    <li><a href="#"><i class="fa fa-weixin"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy;Yau·版权所有 <a href="http://www.miitbeian.gov.cn/">粤ICP备18062481号</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./bundle.js"></script>
+</body>
+</html>
